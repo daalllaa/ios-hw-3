@@ -88,8 +88,126 @@ var wild_Draw = UIImage(named: "Wild_Draw.png")
 /// قم بإنشاء الستركت هنا
 
 // struct ...
+struct Card {
+        var color: String?
+        var number: Int?
+        var actionCards: String?
+        
+    func imageName() -> String {
+            
+        if number != nil{
+            print(" \(color!)_ \(number!)")
+            return (" \(color!)_ \(number!)")
+            
+        }else if actionCards!  == "Wild" || actionCards!  ==   "Wild_Draw" {
+            return  "\(actionCards!)"
+            
+        }else{
+                return  "\(color!)_\(actionCards!)"
+            }
+    
+            
+                    
+               
+        }
+        
+        
+  
+        
+        
+    var cards : [Card] = []
+    let colors = ["Blue","Green","Yellow","Red"]
+    let actioncards = ["Wild","Wild_Draw", "Draw","Reverse", "Skip"]
+        
+    for  color in colors{
+            
+    cards.append(Card(color:color,number:0))
+        
+    for _ in 1...2
+    
+    for action in actionCards{
+    cards.append((Card(color:color , actionCards:action))
+    }
+        
+    for i in 1...9{
+    cards.append((Card(color:color,number:i)))
+    }
+        
+        
+               
+        
+        
+        
+        
+        
+        
+        
+                " \("Green")_\(0).png"
+                " \("Green")_\(1).png"
+                " \("Green")_\(2).png"
+                " \("Green")_\(3).png"
+                " \("Green")_\(4).png"
+                " \("Green")_\(5).png"
+                " \("Green")_\(6).png"
+                " \("Green")_\(7).png"
+                " \("Green")_\(8).png"
+                " \("Green")_\(9).png"
+                " \("Green")_Green_Skip.png"
+                " \("Green")_Green_Reverse.png"
+                " \("Green")_Green_Draw.png"
+               
+                
+        
+        
+        
+        
+        
+        
+                " \("Yellow")_\(0).png"
+                " \("Yellow")_\(1).png"
+                " \("Yellow")_\(2).png"
+                " \("Yellow")_\(3).png"
+                " \("Yellow")_\(4).png"
+                " \("Yellow")_\(5).png"
+                " \("Yellow")_\(6).png"
+                " \("Yellow")_\(7).png"
+                " \("Yellow")_\(8).png"
+                " \("Yellow")_\(9).png"
+                " \("Yellow")_Yellow_Skip.png"
+                " \("Yellow")_Yellow_Reverse.png"
+                " \("Yellow")_Yellow_Draw.png"
+               
+                
+        
+        
+        
+        " \("wild_Draw")_Wild_Draw.png"
+        " \("wild")_Wild.png"
+        " \("Yellow")_Wild_Draw.png"
+        
+
+        
+        
+        
+    }
+        
+    
+    
+}
 
 
+
+
+    
+
+   var Green =   [0,1,2,3,4,5,6,7,8,9,
+                  0,1,2,3,4,5,6,7,8,9]
+    var Red =    [0,1,2,3,4,5,6,7,8,9,
+                  0,1,2,3,4,5,6,7,8,9]
+    var Blue =   [0,1,2,3,4,5,6,7,8,9,
+                  0,1,2,3,4,5,6,7,8,9]
+    var Yellow = [0,1,2,3,4,5,6,7,8,9,
+                  0,1,2,3,4,5,6,7,8,9]
 
 
 
@@ -103,3 +221,25 @@ var wild_Draw = UIImage(named: "Wild_Draw.png")
 //let cardImages = cards.map{UIImage(named: $0.imageName())}
 //randomCardImage
 //cardImages
+
+
+
+//let cardImages = cards.map{UIImage(named: $0.imageName())}
+//randomCardImage
+//cardImages
+
+
+let randomCard = cards.randomElement()!
+let randomCardImage = UIImage(named: randomCard.imageName())
+//
+let cardImages = cards.map{UIImage(named: $0.imageName())}
+randomCardImage
+//cardImages
+
+
+
+let cardImages = cards.map{UIImage(named: $0.imageName())}
+randomCardImage
+cardImages
+
+
